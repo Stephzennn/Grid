@@ -8,7 +8,10 @@ wholeFunction( numberOfSquares)
 num.addEventListener('click' , function() {
     let prevNumber = numberOfSquares 
     numberOfSquares = prompt("How many Squares Per Side")
-    
+    do{
+        numberOfSquares = prompt("How many Squares Per Side")
+    }while(numberOfSquares < 0 || numberOfSquares >= 100)
+
     while(Container.firstChild){
         Container.removeChild(Container.firstChild);
     }
@@ -31,13 +34,20 @@ for (let k = 0; k < numberOfSquares ; k++ ){
     }
 }
 
-
+function getRandomColor() {
+    let r = Math.floor(Math.random() * 256); // Random between 0-255
+    let g = Math.floor(Math.random() * 256); // Random between 0-255
+    let b = Math.floor(Math.random() * 256); // Random between 0-255
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
 const cell = document.querySelectorAll(".cell")
 
 
 function changeBackground(x) {
    
-    x.classList.add("cell2");
+    x.style.backgroundColor = getRandomColor();
+    
+
 
 }
 
