@@ -6,13 +6,25 @@
     display: flex;
     flex-wrap: wrap;
     border: 3px solid;
-
+    justify-content: center;
+    align-items: center;
     
 }
 
 .cell {
     width: 48px;
     height: 48px;
-    border: 1px solid;
-    border-color: blueviolet;
+    
+}
+
+.cell2 {
+    background-color: blueviolet;
+    border: 0px;
+}
+
+.Container.button {
+    
+    margin: 20px;
+    padding: 20px;
+    border: 0px;
 }
